@@ -25,8 +25,8 @@
 #ifdef LOG_INFO
 #define info(message, ...)                                                     \
     do {                                                                       \
-        printf("\033[37m[INFO]:[%s:%d]:[%s]: " message "\n\033[0m", __FILE__,  \
-               __LINE__, __FUNCTION__, ##__VA_ARGS__);                         \
+        fprintf(stderr, "\033[37m[INFO]:[%s:%d]:[%s]: " message "\n\033[0m",   \
+                __FILE__, __LINE__, __FUNCTION__, ##__VA_ARGS__);              \
     } while (0)
 #else
 #define info(msg, ...)                                                         \
@@ -38,8 +38,8 @@
 #ifdef LOG_DEBUG
 #define debug(message, ...)                                                    \
     do {                                                                       \
-        printf("\033[34m[DEBUG]:[%s:%d]:[%s]: " message "\n\033[0m", __FILE__, \
-               __LINE__, __FUNCTION__, ##__VA_ARGS__);                         \
+        fprintf(stderr, "\033[34m[DEBUG]:[%s:%d]:[%s]: " message "\n\033[0m",  \
+                __FILE__, __LINE__, __FUNCTION__, ##__VA_ARGS__);              \
     } while (0)
 #else
 #define debug(msg, ...)                                                        \
@@ -51,8 +51,8 @@
 #ifdef LOG_WARN
 #define warn(message, ...)                                                     \
     do {                                                                       \
-        printf("\033[33m[WARN]:[%s:%d]:[%s]: " message "\n\033[0m", __FILE__,  \
-               __LINE__, __FUNCTION__, ##__VA_ARGS__);                         \
+        fprintf(stderr, "\033[33m[WARN]:[%s:%d]:[%s]: " message "\n\033[0m",   \
+                __FILE__, __LINE__, __FUNCTION__, ##__VA_ARGS__);              \
     } while (0)
 #else
 #define warn(msg, ...)                                                         \
@@ -64,8 +64,8 @@
 #ifdef LOG_ERROR
 #define error(message, ...)                                                    \
     do {                                                                       \
-        printf("\033[31m[ERROR]:[%s:%d]:[%s]: " message "\n\033[0m", __FILE__, \
-               __LINE__, __FUNCTION__, ##__VA_ARGS__);                         \
+        fprintf(stderr, "\033[31m[ERROR]:[%s:%d]:[%s]: " message "\n\033[0m",  \
+                __FILE__, __LINE__, __FUNCTION__, ##__VA_ARGS__);              \
     } while (0)
 #else
 #define error(msg, ...)                                                        \
