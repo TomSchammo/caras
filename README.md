@@ -5,7 +5,7 @@
 
 To use the library, simply paste the `log.h` header file into your project.
 Logging can be enabled with `#define LOG` *before* the include statement.
-All logging is written to `stdout`.
+All logging is written to `stderr`.
 
 ### Example
 
